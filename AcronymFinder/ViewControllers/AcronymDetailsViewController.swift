@@ -29,6 +29,9 @@ class AcronymDetailsViewController: MainViewController, Container {
         
         self.title = "Acronym Details"
         
+        // Initial Setup
+        initialSetup()
+        
         // Fetching the acronym details
         viewModel?.fetchAcronymDetails()
     }
@@ -42,11 +45,14 @@ class AcronymDetailsViewController: MainViewController, Container {
     
     private func updateData() {
         mainStackView.isHidden = false
+        isAnimating = false
         shortFormLabel.text = viewModel?.getAcronymShortForm()
         longFormLabel.text = viewModel?.getAcronymLongForm()?.capitalized
     }
     
     private func handleNoAcronym() {
+        mainStackView.isHidden = false
+        isAnimating = false
         longFormLabel.text = viewModel?.getNoAcronymErrorText()
         longFormLabel.textColor = .red
     }

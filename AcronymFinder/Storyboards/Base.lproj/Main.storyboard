@@ -113,6 +113,7 @@
                     </view>
                     <connections>
                         <outlet property="longFormLabel" destination="8SK-xp-Pms" id="2ho-pF-K30"/>
+                        <outlet property="mainStackView" destination="k8f-le-ipX" id="iUE-nd-wnd"/>
                         <outlet property="shortFormLabel" destination="I8T-Po-NvX" id="6oY-Jo-S0U"/>
                     </connections>
                 </viewController>
